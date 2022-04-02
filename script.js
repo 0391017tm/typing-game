@@ -53,7 +53,6 @@ async function RenderNextSentence() {
   typeDisplayElement.innerText = "";
   sentence.split("").forEach((character) => {
     const characterSpan = document.createElement("span");
-    // characterSpan.classList.add("correct");
     characterSpan.innerText = character;
     typeDisplayElement.appendChild(characterSpan);
 
@@ -79,9 +78,7 @@ function StartTimer() {
 }
 
 function getTimerTime() {
-  return Math.floor(
-    (new Date() - startTime) / 1000
-  ); /* 現在の時刻 - １秒前の時刻 = 1s*/
+  return Math.floor((new Date() - startTime) / 1000);
 }
 
 function TimeUp() {
